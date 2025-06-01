@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/manioc_pratiques_ontology.owl#"
+     xml:base="http://www.example.org/manioc_pratiques_ontology.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.org/manioc_pratiques_ontology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#aCaracteristique -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#aCaracteristique">
+        <rdfs:domain rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Variété"/>
+        <rdfs:range rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartiePlante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#aSousCaracteristique -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#aSousCaracteristique">
+        <rdfs:domain rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartiePlante"/>
+        <rdfs:range rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartiePlante"/>
+        <rdfs:comment>Lie une caractéristique morphologique générale à ses sous-caractéristiques (feuilles, tiges, pétioles).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#adaptePourSol -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#adaptePourSol">
+        <rdfs:domain rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+        <rdfs:range rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Sol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#estComposeeDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#estComposeeDe">
+        <rdfs:domain rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+        <rdfs:range rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#prefereSol -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#prefereSol">
+        <rdfs:domain rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Variété"/>
+        <rdfs:range rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Sol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#recommandePratique -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#recommandePratique">
+        <rdfs:domain rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Variété"/>
+        <rdfs:range rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#DescriptionDetaillee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#DescriptionDetaillee">
+        <rdfs:domain rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#NomPratique -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#NomPratique">
+        <rdfs:domain rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#NombrePassage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#NombrePassage">
+        <rdfs:domain rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Feuille -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Feuille">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartiePlante"/>
+        <rdfs:comment>Représente les caractéristiques morphologiques des feuilles du manioc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#FeuilleApicale -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#FeuilleApicale">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartieFeuille"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#FeuilleEpanouie -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#FeuilleEpanouie">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartieFeuille"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#PartieFeuille -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#PartieFeuille">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Feuille"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#PartiePlante -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#PartiePlante">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Petiole -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Petiole">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartiePlante"/>
+        <rdfs:comment>Représente les caractéristiques morphologiques des pétioles du manioc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Sol -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Sol"/>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Tige -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Tige">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartiePlante"/>
+        <rdfs:comment>Représente les caractéristiques morphologiques des tiges du manioc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#TypeChoixTerrain -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#TypeChoixTerrain">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#TypeEntretienCulture -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#TypeEntretienCulture">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#TypeFertilisation -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#TypeFertilisation">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#TypePreparationSol -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#TypePreparationSol">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#TypeSemisPlantation -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#TypeSemisPlantation">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#VarieteAmelioree -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#VarieteAmelioree">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Variété"/>
+        <rdfs:comment>Variété de manioc améliorée par sélection ou recherche.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#VarieteLocale -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#VarieteLocale">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Variété"/>
+        <rdfs:comment>Représente une variété de manioc locale ou traditionnelle, non améliorée par sélection scientifique.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Variété -->
+
+    <owl:Class rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Variété">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Représente une variété de manioc cultivators.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Buttage -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Buttage">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#TypeEntretienCulture"/>
+        <DescriptionDetaillee>Le buttage est une pratique d&apos;entretien des cultures de manioc réalisée 5 à 6 semaines après la plantation. Elle consiste à amasser la terre autour de la base des plants pour les stabiliser et favoriser le développement des tubercules</DescriptionDetaillee>
+        <NomPratique>Buttage</NomPratique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_94_0270 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_94_0270">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartiePlante"/>
+        <aSousCaracteristique rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Feuille_94_0270"/>
+        <aSousCaracteristique rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Petiole_94_0270"/>
+        <aSousCaracteristique rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Tige_94_0270"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Feuille_94_0270 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Feuille_94_0270">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Feuille"/>
+        <aSousCaracteristique rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_PartieFeuille_94_0270"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Feuille_Apicale_94_0270 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Feuille_Apicale_94_0270">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#FeuilleApicale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Feuille_Epanouie_94_0270 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Feuille_Epanouie_94_0270">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#FeuilleEpanouie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_PartieFeuille_94_0270 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_PartieFeuille_94_0270">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PartieFeuille"/>
+        <aSousCaracteristique rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Feuille_Apicale_94_0270"/>
+        <aSousCaracteristique rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Feuille_Epanouie_94_0270"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Petiole_94_0270 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Petiole_94_0270">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Petiole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Tige_94_0270 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_Tige_94_0270">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Tige"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#ChoixDuTerrain -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#ChoixDuTerrain">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#TypeChoixTerrain"/>
+        <DescriptionDetaillee>Choix de sols argilo-sableux profonds, meubles, bien drainés, riches en potassium avec un pH de 6. Éviter les sols argileux et humides.</DescriptionDetaillee>
+        <NomPratique>Choix du terrain</NomPratique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Désherbage -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Désherbage">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#TypeEntretienCulture"/>
+        <DescriptionDetaillee>Le désherbage est une pratique essentielle pour la culture du manioc, nécessitant 3 sarclages : le premier 3 à 4 semaines après la plantation, le deuxième 2 mois après la plantation, et le dernier dès que nécessaire. La compétition des mauvaises herbes réduit la couverture foliaire et le développement des racines tubéreuses, pouvant diminuer le rendement de 40% pour les variétés à développement précoce de branches secondaires et de 70% pour celles à faible développement de branches secondaires.</DescriptionDetaillee>
+        <NomPratique>Désherbage</NomPratique>
+        <NombrePassage>Trois (03) fois.</NombrePassage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Fertilisation_Fumure_De_Fond -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Fertilisation_Fumure_De_Fond">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#TypeFertilisation"/>
+        <DescriptionDetaillee>La fumure de fond consiste à incorporer des débris végétaux facilement décomposables, du compost ou du fumier avant les cultures de manioc. Cette pratique enrichit le sol en matière organique et en nutriments, favorisant la croissance initiale des plants et le développement des tubercules.</DescriptionDetaillee>
+        <NomPratique>Utilisation de fumure de fond pour la fertilisation.</NomPratique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Fertilisation_Fumure_Minerale -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Fertilisation_Fumure_Minerale">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#TypeFertilisation"/>
+        <DescriptionDetaillee>La fumure minérale pour le manioc privilégie les engrais riches en potasse. Appliquer 300 kg/ha de NPK 14-23-14 dans une rai au deuxième sarclage, soit 2 mois après la plantation, pour soutenir la croissance des plants et le développement des tubercules.</DescriptionDetaillee>
+        <NomPratique>Utilisation de fumure minérale pour la fertilisation.</NomPratique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Itineraire_Technique_94_0270 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Itineraire_Technique_94_0270">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#PratiqueAgricole"/>
+        <estComposeeDe rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Buttage"/>
+        <estComposeeDe rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#ChoixDuTerrain"/>
+        <estComposeeDe rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Désherbage"/>
+        <estComposeeDe rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Fertilisation_Fumure_De_Fond"/>
+        <estComposeeDe rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Fertilisation_Fumure_Minerale"/>
+        <estComposeeDe rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Plantation_Bouture"/>
+        <estComposeeDe rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Preparation_A_Plat"/>
+        <estComposeeDe rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Preparation_Billon"/>
+        <DescriptionDetaillee>Ensemble des pratiques recommandées pour la culture de la variété TMS 94/0270 , incluant choix du terrain, préparation du sol (à plat ou sur billons), plantation, fertilisation, entretien et buttage.</DescriptionDetaillee>
+        <NomPratique>Itinéraire technique pour la variété améliorée TMS 94/0270</NomPratique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Plantation_Bouture -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Plantation_Bouture">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#TypeSemisPlantation"/>
+        <DescriptionDetaillee>La plantation s&apos;effectue par bouturage de tiges principales, précisément la partie aoûtée. Les boutures, de 20 à 25 cm de longueur, 2 cm de diamètre minimum et 5 à 7 nœuds, sont coupées avec un matériel tranchant sur des plants sains et matures, provenant de la base ou du milieu de la tige. Les écartements recommandés varient : 0,80 m x 0,80 m en terre pauvre, 1 m x 1 m en terre à fertilité moyenne (recommandé lors de la sortie), et 1,20 m x 1,20 m en terre riche. Les boutures, préalablement trempées dans une solution de cendres (5 poignées pour 1 l d&apos;eau), sont plantées avec une inclinaison de 45° dans la direction des vents dominants (vers l&apos;ouest), les 2/3 enfoncés dans le sol, en respectant la polarité des nœuds (bourgeon vers le haut). La densité est de 10 000 boutures par hectare, avec un champ de phytosanitation pour remplacer les pieds morts. En condition pluviale stricte, planter de mi-juin à fin juillet ; sous irrigation, à tout moment si la source d&apos;eau supporte plus de 5 mois d&apos;irrigation.</DescriptionDetaillee>
+        <NomPratique>Plantation</NomPratique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Preparation_A_Plat -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Preparation_A_Plat">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#TypePreparationSol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Preparation_Billon -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Preparation_Billon">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#TypePreparationSol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Sol_Argilo_Sableux -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Sol_Argilo_Sableux">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Sol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/manioc_pratiques_ontology.owl#Variété_94_0270 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/manioc_pratiques_ontology.owl#Variété_94_0270">
+        <rdf:type rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#VarieteAmelioree"/>
+        <aCaracteristique rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Caracteristique_94_0270"/>
+        <prefereSol rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Sol_Argilo_Sableux"/>
+        <recommandePratique rdf:resource="http://www.example.org/manioc_pratiques_ontology.owl#Itineraire_Technique_94_0270"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
